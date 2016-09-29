@@ -2,7 +2,8 @@
 
 const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
-const twigInjectSvg = require('../index.js');
+// const twigInjectSvg = require('../index.js');
+const twigInjectSvg = require('twig-inject-svg');
 
 const $ = gulpLoadPlugins();
 

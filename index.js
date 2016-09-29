@@ -25,12 +25,18 @@ module.exports = function (filePath) {
         var svgFiles = {};
         var match;
         var origin = contents;
+        var copyAttrs = ['class', 'id', 'style', 'title', 'alt'];
         while(match = /<img([\w\W]+?)(>|><\/img>)/.exec(contents)) {
             if (!svgFiles[match[0]]) {
                 var img = cheerio('img', match[0]);
                 if (/\.svg$/.test(img.attr('src'))) {
                     svgFiles[match[0]] = fs.readFileSync(img.attr('src')).toString();
                     svgFiles[match[0]] = cheerio('svg', svgFiles[match[0]]);
+
+                    for(var i in copyAttrs) {
+                        if (img.attr(copyAttrs[i]))
+                            svgFiles[match[0]].attr(copyAttrs[i], img.attr(copyAttrs[i]));
+                    }
                 }
             }
 
