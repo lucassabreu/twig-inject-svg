@@ -1,0 +1,32 @@
+{
+  "name": "twig-inject-svg",
+  "version": "1.0.1-beta",
+  "description": "Injects SVG content into Twig template file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucassabreu/twig-inject-svg.git"
+  },
+  "keywords": [
+    "twig",
+    "svg",
+    "inject"
+  ],
+  "author": "Lucas dos Santos Abreu <lucas.s.abreu@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucassabreu/twig-inject-svg/issues"
+  },
+  "homepage": "https://github.com/lucassabreu/twig-inject-svg#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "event-stream": "^3.3.4",
+    "iconv-lite": "^0.4.13"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

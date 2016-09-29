@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <ul{{ attributes }} id="navigation">
+        {% for item in navigation %}
+            <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+        {% endfor %}
+        </ul>
+        <img src="images/kiwi.png" alt="it's a kiwi">
+
+        <img src="images/kiwi.svg" alt="it's a kiwi">
+        <img src="images/kiwi.svg" alt="it's a kiwi" />
+        <img src="images/kiwi.svg" alt="it's a kiwi" ></img>
+        <img src="images/kiwi.svg" alt="it's a kiwi" >
+        </img>
+        <img 
+            src="images/kiwi.svg" 
+            alt="it's a kiwi" >
+        <img src="images/kiwi.svg" alt="it's a kiwi">
+
+        <h1>My Webpage</h1>
+        {{ a_variable }}
+        <img 
+            src="images/kiwi.svg" 
+            alt="it's a kiwi is fun" >
+        <p>here it ends<p>
+    </body>
+</html>
